@@ -1,0 +1,402 @@
+// 共用
+.container{
+    max-width: 940px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+header{
+    h1{
+        display: inline-block;
+        a{
+            padding:30px 0;
+            display: block;
+            img{
+                height: 40px;
+                width: auto;
+            }
+        }
+    }
+    ul{
+        position: absolute;
+        top:10px;
+        right:73px;
+        display: -ms-box;
+        display: -moz-webkit-flex;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        li{
+            a{
+                padding:30px;
+                display: block;
+                text-decoration: none;
+                color: #3F5D45;
+                font-size: 16px;
+                font-family: PingFang TC;
+                font-weight: 600;
+                border-bottom:4px solid transparent;
+                -webkit-transition: all 0.3s;
+                transition: all .3s;
+                &:hover{
+                    border-bottom-color: #3F5D45;
+                }
+            }
+        }
+    }
+    .cartButton{
+        position: absolute;
+        top:38px;
+        right:0;
+        a{
+            display: block;
+            width: 24px;
+            height: 24px;
+            background-image: url(../images/shopping_cart.png); background-position: center center;
+            background-repeat: no-repeat;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: -o-pixelated;
+            image-rendering: pixelated;
+            -webkit-transition: all 0.3s;
+            transition: all .3s;
+            &:hover{
+                background-size:20px;
+            }
+        }
+    }
+}
+
+main{
+    padding-bottom: 20px;
+    .banner{
+        a{
+            display: block;
+        }
+        margin-bottom: 60px;
+    }
+    .row{
+        display: -ms-box;
+        display: -moz-webkit-flex;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: space-between;
+        -webkit-justify-content: space-between;
+        -webkit-box-pack: space-between;
+        -moz-box-pack: space-between;
+        justify-content: space-between;
+        aside.category{
+            width: 300px;
+            h2{
+                display: -ms-box;
+                display: -moz-webkit-flex;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-align: center;
+                -webkit-align-items: center;
+                align-items: center;
+                -ms-flex-pack: center;
+                -webkit-justify-content: center;
+                -webkit-box-pack: center;
+                -moz-box-pack: center;
+                justify-content: center;
+                height:65px;
+                background-color: #3F5D45;
+                color: #fff;
+                font: 24px/40px PingFang TC;
+            }
+            li{
+                border-left: 1px solid #EAF0ED;
+                border-right: 1px solid #EAF0ED;
+                border-bottom: 1px solid #EAF0ED;
+                -webkit-transition: all 0.3s;
+                transition: all .3s;
+                &:hover{
+                    background-color: #FFE180;
+                }
+                a{
+                    display: -ms-box;
+                    display: -moz-webkit-flex;
+                    display: -webkit-flex;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -ms-flex-align: center;
+                    -webkit-align-items: center;
+                    align-items: center;
+                    -ms-flex-pack: center;
+                    -webkit-justify-content: center;
+                    -webkit-box-pack: center;
+                    -moz-box-pack: center;
+                    justify-content: center;
+                    height:65px;
+                    text-decoration: none;
+                    font: 600 24px/40px PingFang TC;
+                    color: #3F5D45;
+                }
+            }
+            .active{
+                background-color: #EAF0ED;
+            }
+        }
+        .content{
+            width: calc(100% - 320px);
+            margin-left: 20px;
+            ul.productList{
+                display: -ms-box;
+                display: -moz-webkit-flex;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-pack: space-between;
+                -webkit-justify-content: space-between;
+                -webkit-box-pack: space-between;
+                -moz-box-pack: space-between;
+                justify-content: space-between;
+                -ms-flex-wrap: wrap;
+                -moz-flex-wrap: wrap;
+                -webkit-flex-wrap: wrap;
+                flex-wrap: wrap;
+                li{
+                    max-width:300px;
+                    position: relative;
+                    -webkit-box-flex: 0 50%; -moz-box-flex: 0 50%; -webkit-flex: 0 50%; -ms-flex: 0 50%; flex: 0 50%;
+                    margin-bottom: 20px;
+                    a{
+                        display: block;
+                    }
+                    span.tag{
+                        position: absolute;
+                        top:0;
+                        left:20px;
+                        background-color: #3F5D45;
+                        color: #fff;
+                        writing-mode: vertical-lr;
+                        padding:12px 10px 10px;
+                        letter-spacing: 4px;
+                    }
+                    .addToTrace{
+                        position: absolute;
+                        right:22px;
+                        top:19px;
+                        a{
+                            width: 25px;
+                            height: 25px;
+                            background-image: url(../images/favorite_border.png); background-position: center center; background-size: 100%; background-repeat: no-repeat;
+                        }
+                    }
+                    .productInfo{
+                        display: -ms-box;
+                        display: -moz-webkit-flex;
+                        display: -webkit-flex;
+                        display: -ms-flexbox;
+                        display: flex;
+                        border-left: 1px solid #EAF0ED;
+                        border-right: 1px solid #EAF0ED;
+                        a{
+                            color: #3F5D45;
+                            text-decoration: none;
+                            font: 300 20px/20px PingFang TC;
+                            padding: 16px 0;
+                            text-align: center;
+                            border-right: 1px solid #EAF0ED;
+                            max-width: 172px;
+                            width: 100%;
+                        }
+                        .price{
+                            max-width: 127px;
+                            width: 100%;
+                            font: 600 20px/24px PingFang TC;
+                            color: #3F5D45;
+                            padding: 16px 0;
+                            text-align: center;
+                        }
+                    }
+                    .addToCart{
+                        background-color: #EAF0ED;
+                        a{
+                            color: #3F5D45;
+                            font: 600 24px/20px PingFang TC;
+                            text-decoration: none;
+                            text-align: center;
+                            padding: 22px 0;
+                            -webkit-transition: all 0.3s;
+                            transition: all .3s;
+                            &:hover{
+                                background-color: #FFE180;
+                            }
+                        }
+                    }
+                }
+            }
+            ul.pagination{
+                display: -ms-box;
+                display: -moz-webkit-flex;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-pack: end;
+                -webkit-justify-content: flex-end;
+                -webkit-box-pack: end;
+                -moz-box-pack: end;
+                justify-content: flex-end;
+                .pageBack{
+                    a{
+                        background-image: url(../images/arrow_left.png); background-position: center center; background-size: 24px; background-repeat: no-repeat;
+                        width: 60px;
+                        height: 20px;
+                    }
+                }
+                .pageNext{
+                    a{
+                        background-image: url(../images/arrow_right.png); background-position: center center; background-size: 24px; background-repeat: no-repeat;
+                        width: 60px;
+                        height: 20px;
+                    }
+                }
+                a{
+                    display: block;
+                    width: 60px;
+                    text-align: center;
+                    font: 300 20px/20px PingFang TC;
+                    padding: 15px 0;
+                    text-decoration: none;
+                    color: #3F5D45;
+                    border: 1px solid #EAF0ED;
+                    -webkit-transition: all 0.3s;
+                    transition: all .3s;
+                    &:hover{
+                        background-color: #FFE180;
+                    }
+                }
+                .active{
+                    a{
+                        color:#fff;
+                        background-color: #3F5D45;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer{
+    .footerTop{
+        background-color: #3F5D45;
+        ul{
+            display: -ms-box;
+            display: -moz-webkit-flex;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-pack: space-between;
+            -webkit-justify-content: space-between;
+            -webkit-box-pack: space-between;
+            -moz-box-pack: space-between;
+            justify-content: space-between;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            padding: 30px 0;
+            li{
+                display: -ms-box;
+                display: -moz-webkit-flex;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-align: center;
+                -webkit-align-items: center;
+                align-items: center;
+                .footerLogo-sm{
+                    width: 40px;
+                    height: 40px;
+                }
+                span{
+                    color: #fff;
+                    font: 24px/29px 'Helvetica Neue';
+                    padding-left: 20px;
+                }
+                .subscribeBox{
+                    display: -ms-box;
+                    display: -moz-webkit-flex;
+                    display: -webkit-flex;
+                    display: -ms-flexbox;
+                    display: flex;
+                    width: 380px;
+                    height: 56px;
+                    .subscribeInput{
+                        image-rendering: -webkit-optimize-contrast;
+                        image-rendering: -moz-crisp-edges;
+                        image-rendering: -o-pixelated;
+                        image-rendering: pixelated;
+                        background-image: url(../images/mail-24px.png);
+                        background-position: 20px center;
+                        background-size: 24px;
+                        background-repeat: no-repeat;
+                        background-color: #EAF0ED;
+                        width: calc(100% - 64px);
+                        height: 100%;
+                    }
+                    .subscribeSubmit{
+                        image-rendering: -webkit-optimize-contrast;
+                        image-rendering: -moz-crisp-edges;
+                        image-rendering: -o-pixelated;
+                        image-rendering: pixelated;
+                        background-image: url(../images/arrow_forward-24px.png);
+                        background-position: center center;
+                        background-size: 24px;
+                        background-repeat: no-repeat;
+                        background-color: #FFE180;
+                        width: 64px;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .footerBottom{
+        padding: 30px 0;
+        background-color: #EAF0ED;
+        color: #3F5D45;
+        .footerLogo-lg{
+            width: 171px;
+            height: 27px;
+        }
+        .footerInfo{
+            padding-top: 115px;
+            font: 16px/24px 'Helvetica Neue';
+            a{
+                color: #3F5D45;
+                font: 16px/24px 'Helvetica Neue';
+                text-decoration: none;
+            }
+        }
+        ul.copyright{
+            padding-top: 30px;
+            display: -ms-box;
+            display: -moz-webkit-flex;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-pack: space-between;
+            -webkit-justify-content: space-between;
+            -webkit-box-pack: space-between;
+            -moz-box-pack: space-between;
+            justify-content: space-between;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            li{
+                .socialIcon{
+                    width: 32px;
+                    height: 32px;
+                    display: inline-block;
+                    &:first-of-type{margin-right: 8px;}
+                }
+
+            }
+        }
+    }
+}
